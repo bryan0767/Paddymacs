@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>Paddy Mac's</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/eQEA/3krAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/3c1AP93BQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/3YRAP92JAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP93MgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/dzAAAAAAAP92BAD/dhsA/3cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/eCEA/3iJAP93SAAAAAAA/3YwAP92DAD/dsoA/3b+AP93dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/3iuAP93/wD/dvcA/3YfAP92LwD/dn0A/3b/AP92/wD/drQA/3cMAAAAAAAAAAAAAAAAAAAAAAAAAAAA/3gfAP94wwD/d/8A/3f/AP92jgD/djAA/3bcAP92/wD/dv8A/3b/AP931wD/dwMAAAAAAAAAAAAAAAAAAAAAAP94tgD/eP8A/3f/AP93/wD/dvEA/3ZlAP92/wD/dv8A/3b/AP92/wD/d+wA/3cEAAAAAAAAAAAAAAAAAAAAAAD/eI8A/3j/AP93/wD/d/8A/3bxAP915AD/dOYA/3THAP90qQD/dpAA/3c/AAAAAAAAAAAAAAAAAAAAAAAAAAAA/3gBAP94NwD/d24A/3emAP920QD/deoA/3X4AP92/wD/dv8A/3TMAP9yPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/eG4A/3f7AP92/wD/dv8A/3b8AP904QD/dv8A/3b/AP92/wD/dvQA/20UAAAAAAAAAAAAAAAAAAAAAAD/eQAA/3jlAP93/wD/d/8A/3b/AP92/QD/dNgA/3b/AP92/wD/dv8A/3b3AP9tFQAAAAAAAAAAAAAAAAAAAAAA/3sAAP94lwD/d90A/3f9AP92/wD/duAA/3TFAP92/wD/dv8A/3KOAP9xPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/3cOAP939wD/dv8A/3aFAP9yZgD/dfsA/3XkAP9sEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/dzUA/3ZYAP92BACnCQAA/2cPAP9mCAAAAAAAAAAAAAAAAAAAAAAAAAAA/z8AAP8/AAD+fwAA/v8AAP6PAADiDwAA4AcAAMADAADAAwAAwAcAAMAHAADgAwAAwAMAAMAHAADwDwAA+J8AAA==" rel="icon" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="../src/index.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Questrial" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?9ukd8d">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
+
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+
+        jQuery(function($){
+            $("#datepicker").datepicker({
+              altField: "#actualDate",
+              onSelect: fetcher
+              });
+            })
+
+    </script>
+
+    </head>
+    <body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="https://jonthornton.github.io/jquery-timepicker/jquery.timepicker.js"></script>
+    <link rel="stylesheet" href="https://jonthornton.github.io/jquery-timepicker/jquery.timepicker.css">
+
+    <!-- Menu Buttons to close the overlay navigation -->
+    <div id="myNav" class="overlay">
+      <div class="overlay-content">
+        <li  onClick='openNav()'><a href="#home2" class='menuInput'>Home</a></li>
+        <li class='menuInput' onClick='openNav()'><a class='menuInput' href="#specials">Specials</a></li>
+
+    <!-- menu -->
+        <form action = "/api/menu" role = 'form' method ="get" >
+            <input name ='menu' value ='Menu'type='submit' class='menuInput' onClick='openNav()' >
+        </form>
+      <!-- menu -->
+
+        <li class='menuInput' onClick='openNav()'><a class='menuInput' href="#reserve">Reserve</a></li>
+
+      </div>
+    </div>
+
+    <span id='toggleSmall' onclick="openNav()">&#9776;</span>
+
+    <div class='headerBar display'>
+      <span id='toggleButton' onclick="openNav()">&#9776;</span>
+      <span id='toggleSmall' onclick="openNav()">&#9776;</span>
+
+      <div class='iconTop'>
+          <a target ='blank' href ='https://www.facebook.com/pppalpa/'><i
+          class="fa fa-facebook-official"></i></a>
+          <a target ='blank' href ='https://twitter.com/paddymacschi'><i
+          class="fa fa-twitter"></i></a>
+          <a target ='blank' href ='https://www.instagram.com/paddymacschicago1/'><i
+            class="fa fa-instagram"></i></a>
+          <a target ='blank' href ='https://www.yelp.com/biz/paddy-macs-chicago'><i
+              class="fa fa-yelp"></i></a>
+      </div>
+
+      <a id='headTitle'href='#home2'><div class='headTitle'>Paddy Mac's</div></a>
+
+        <div class='address'>
+            <p>4157 N. Pulaski | Chicago</p>
+        </div>
+    </div>
+
+  <div class=' main text-center' >
+      <div id="myCarousel2" class="carousel slide"
+        
+          data-ride="carousel">
+        <a id='home2'></a>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img style='width:100%;height: 100%;'src="https://img.grouponcdn.com/deal/5GS3r8zKhjchA7pshfvuCV/ihs_0-125_0195-2048x1229/v1/c700x420.jpg"
+              alt="New York">
+              <div class="carousel-caption mainJoin text-center" id='banner'>
+                <h3 id ='join'>Join Our NewsLetter</h3>
+                <div class='row text-center dateInput'>
+                  <form action = "/api/signup"  role = 'form' method ="post">
+                    <div class='col-xs-8 col-sm-8 col-md-8 dateEmail'>
+                        <div class='form-group'>
+
+                            <input id='signup'
+                            class= 'form-control' type="text"
+                            required placeholder="Email..."
+                            name="email">
+                        </div>
+                    </div>
+                    <div class='col-xs-4 col-sm-4 col-md-4 dateSubmit'>
+                      <div class='form-group'>
+                          <input id = 'submit'
+                          class = 'btn' value ='Send' type="submit" ></input>
+                     </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class='bottomMain'>
+                <a href='#specials'><h3>Daily Specials</h3></a>
+                  <a href='/menu'><h3>Our Menu</h3></a>
+                <a href='#reserve'><h3>Reserve a table!</h3></a>
+              </div>
+            </div>
+
+            <div class="item" >
+              <img style='width:100%;' src="https://cdn.glitch.com/c0af8edd-fe50-4cd2-9fa2-16da595b29a4%2Ftitlepic.jpg?1529791706391" alt="Chicago" width="1200" height="700">
+              <div class="carousel-caption titleCen" id ='banner2'>
+                  <h3>Hungry?</h3>
+                  <a href='/menu'>
+                  <h4>Check Out Our Menu</h4>
+                </a>
+              </div>
+              <div class='bottomMain'>
+                <a href='#specials'><h3>Daily Specials</h3></a>
+                  <a href='/menu'><h3>Our Menu</h3></a>
+                <a href='#reserve'><h3>Reserve a table!</h3></a>
+              </div>
+            </div>
+            </div>
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+      </div>
+    </div>
+
+    <!-- Specials -->
+    <a id='specials'></a>
+    <div class=' special text-center desc'>
+      <h1 >Daily Specials</h1>
+    </br>
+    <div id="myCarousel" style ='margin:0 auto;' class="carousel slide" data-interval="false" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+
+          <div class="item food active">
+            <img src="https://cdn.glitch.com/c0af8edd-fe50-4cd2-9fa2-16da595b29a4%2Fburger.jpg?1529791512856"
+            alt="New York" style='min-height:200px'>
+            <div class="carousel-caption foodCap">
+              <div class='foodDiv'>
+                <h2>Burger Mondays</h2>
+                <p>$4 Burgers</p>
+                <p>$3 Leni Pints</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item food">
+            <img src="https://cdn.glitch.com/c0af8edd-fe50-4cd2-9fa2-16da595b29a4%2Ftacos.jpg?1529791704882" alt="Chicago" style='min-height:200px' height="700">
+            <div class="carousel-caption foodCap">
+              <div class='foodDiv'>
+              <h2>Taco Tuesdays</h2>
+              <p>$4 Tacos</p>
+              <p>$2 Coors or Miller lites</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="item food">
+            <img src="https://cdn.glitch.com/c0af8edd-fe50-4cd2-9fa2-16da595b29a4%2Fribs.jpg?1529791704666" alt="Chicago" style='min-height:200px' height="700">
+            <div class="carousel-caption foodCap">
+              <div class='foodDiv'>
+              <h2>Rib Wednesdays</h2>
+              <p>$12.50 full/7.25 Half</p>
+              <p>$3 Sam Adams</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="item food">
+            <img src="https://cdn.glitch.com/c0af8edd-fe50-4cd2-9fa2-16da595b29a4%2Fwings.jpg?1529791704778" style='min-height:200px' width="1200" height="1000">
+            <div class="carousel-caption foodCap">
+              <div class='foodDiv'>
+              <h2>Wings Thursday</h2>
+              <p>$.50 Hot Wings</p>
+              <p>$3 Dos XX Pints</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="item food">
+            <img src="https://cdn.glitch.com/c0af8edd-fe50-4cd2-9fa2-16da595b29a4%2Ffish.jpg?1529791512856" alt="Chicago" style='min-height:200px' height="700">
+            <div class="carousel-caption foodCap">
+              <div class='foodDiv'>
+              <h2>Fish Friday</h2>
+              <p>$9 All you can eat fish fry</p>
+              <p>$3 Blue Moons</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="item food">
+            <img src="https://cdn.glitch.com/c0af8edd-fe50-4cd2-9fa2-16da595b29a4%2Fbeer.jpg?1529791513569" alt="Chicago" style='min-height:200px' height="700">
+            <div class="carousel-caption foodCap">
+              <div class='foodDiv'>
+
+              <h2>Revolution Saturday</h2>
+              <p>$4.50 Blue Moons</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="item food" id ='burger'>
+            <img src="https://cdn.glitch.com/c0af8edd-fe50-4cd2-9fa2-16da595b29a4%2Fbeer.jpg?1529791513569" alt="Los Angeles" style='min-height:200px' height="700">
+            <div class="carousel-caption foodCap">
+              <div class='foodDiv'>
+              <h2>Coors Sunday</h2>
+              <p>$3 Coors & Miller lites</p>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+
+    <ol class=" keys text-center"  >
+
+      <li data-target="#myCarousel" data-slide-to="0">Mon</li>
+      <li data-target="#myCarousel" data-slide-to="1">Tue</li>
+      <li data-target="#myCarousel" data-slide-to="2">Wed</li>
+      <li data-target="#myCarousel" data-slide-to="3">Thu</li>
+      <li data-target="#myCarousel" data-slide-to="4">Fri</li>
+      <li data-target="#myCarousel" data-slide-to="5">Sat</li>
+      <li data-target="#myCarousel" data-slide-to="6">Sun</li>
+
+    </ol>
+
+  </div>
+  <!-- end specials -->
+
+<!-- events/reserve -->
+<div class='event'>
+  <div class='row'>
+    <div  data-key=1  class='col-sm-4 eventPics'>
+      <img data-key=1 class='img-responsive imgyo'style='5px solid blue'
+      src ='https://media1.fdncms.com/sacurrent/imager/u/magnum/2521168/dadskaraoke_karaoke.jpg'/>
+      <div data-key=1 id='yooo'class='imgover text-center'>
+        <p class='imgoverPic'>
+          Join us every Tuesday
+          for Open Mic starting at 9PM!</p>
+      </div>
+    </div>
+    <div  data-key=2  class='col-sm-4 eventPics'>
+      <img data-key = 2 class='imgyo'
+      src ='http://79eeea381619f313d82e-993cdc17da461fcae971e861a6f98752.r94.cf1.rackcdn.com/chicago/event/image/1000026796/the-comedy-bar-chicago-chi-01-1013331-regular.jpg'/>
+
+      <div data-key = 2 class='imgover text-center'>
+        <p class='imgoverPic'>Join us every Thursday for Trivia
+          starting at 8PM!</p>
+      </div>
+
+    </div>
+    <div  data-key=3  class='col-sm-4 eventPics' >
+      <img class='imgyo' data-key = 3 src ='https://cdn.glitch.com/c0af8edd-fe50-4cd2-9fa2-16da595b29a4%2Fbarfood.jpg?1529791510150'/>
+      <div data-key = 3 class='imgover text-center'>
+        <p class='imgoverPic'>Check Out Our <form action = "/api/menu" role = 'form' method ="get" >
+              <input name ='menu' value ='Menu'type='submit' class='menuInput2' >
+            </form></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- reserve -->
+<a id='reserve'></a>
+      <div class='reserve'>
+          <div class='row'>
+            <div class='col-sm-6 col1' >
+
+              <div class='reserveBoxes'>
+              <div class='col-xs-12 col-sm-12 text-center'>
+                <p style ='letter-spacing:2px;'> Got a big group? Make a reservation
+                  with us in advance. For more information or any special requests
+                  please send us a message.
+                </p>
+              </br>
+              </div>
+                <form action = "/api/reserve"  role = 'form' method ="post">
+                  <div class='col-xs-12 col-sm-12 reserveDate'>
+                      <div class='form-group'>
+                          <input id='datepicker'
+                          class= 'form-control' placeholder="Date" type="text"
+                          required
+                          name="date">
+                      </div>
+                  </div>
+                <div class='col-xs-12 col-sm-12 reserveTime'>
+                    <div class='form-group'>
+                        <input id='timepicker'
+                        class= 'form-control' placeholder="Time" type="text"
+                        required
+                        name="time">
+                    </div>
+                </div>
+                  <div class='col-xs-8 col-sm-8 reserveTime'>
+                      <div class='form-group'>
+                          <input id='reserveName'
+                          class= 'form-control' placeholder="Name" type="text"
+                          required
+                          name="name">
+                      </div>
+                  </div>
+                  <div class='col-xs-4 col-sm-4  reserveTime'>
+                      <div class='form-group'
+                      id='spinnerdiv'
+                       style='float:right;'>
+                          <input
+                          class= 'form-control'placeholder="Size" type="value"
+                          required
+                          name="size">
+                      </div>
+                  </div>
+                  <div class='col-xs-12 col-sm-12 reserveSubmit'>
+                    <div class='form-group'>
+                        <input id= 'reserveSubmit'
+                        class = 'btn'
+                        value ='Send'
+                        type="submit" >
+                   </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class='col-xs-12 col-sm-6 desc text-center'>
+              <h4>Questions? </br>Send us a message.</h4>
+            <form action = "/api/contact"  role = 'form' method ="post">
+              <div class ='row row1'>
+                    <div class='form-group'>
+                      <div class ='col-sm-6 col-xs-12 col-md-6 col-lg-6 text-center' id='contactName'>
+                        <input class= 'form-control' type="text"
+                      name="name"
+                      id='nameInput'
+                      required placeholder='Name'>
+                      </div>
+                    </div>
+                    <div class='form-group'>
+                      <div class ='col-sm-6 col-xs-12 col-md-6 col-lg-6 text-center' id='contactEmail'>
+                        <input required class= 'form-control' type="email"
+                        name="email" id = 'emailInput' placeholder='Email'>
+                      </div>
+                    </div>
+              <!-- </div> -->
+              <div class = 'form-group row2'>
+                  <div class = 'col-xs-12 col-sm-12 comment'>
+                    <textarea rows=5 maxlength ='5000' class ='form-control' id ='comment'
+                      name="text" required placeholder='Message...' type ='textarea' value = ''></textarea>
+                  </div>
+              </div>
+              <div class='form-group contactSubmitdiv'>
+                  <div class ='col-sm-12'>
+                    <button class = 'btn pull-right' id='contactSubmit'
+                     type="submit">Send</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class='container' >
+      <div class = 'row'>
+        <div class = 'col-xs-12 text-center col-sm-4' style='margin:20px 0 30px 0;'>
+          <h4>CONTACT</h4>
+          </br>
+          <p>4157 N. Pulaski</p>
+          <p>Chicago, IL 60641</p>
+          </br>
+        <a href='mailto:Paddymacschicago1@gmail.com?Subject=Hello%20again'><p id ='footeremail'>E / Paddymacschicago1@gmail.com</p></a>
+          <p>T / 773-279-9300</p>
+        </br>
+
+            <div class='icon'>
+              <a target ='blank' href ='https://www.facebook.com/pppalpa/'><i
+              class="fa fa-facebook-official"></i></a>
+            <a target ='blank' href ='https://twitter.com/paddymacschi'><i
+              class="fa fa-twitter"></i></a>
+              <a target ='blank' href ='https://www.instagram.com/paddymacschicago1/'><i
+                class="fa fa-instagram"></i></a>
+                <a target ='blank' href ='https://www.yelp.com/biz/paddy-macs-chicago'><i
+                  class="fa fa-yelp"></i></a>
+              </div>
+              <div>
+                <span class="glyphicon glyphicon-copyright-mark symbol">
+                </span> 2018 Paddy Mac's Pub & Grill
+              </div>
+        </div>
+        <div class = 'col-xs-12 col-sm-4 text-center' style='margin:20px 0 30px 0;'>
+          <h4>HOURS</h4>
+        </br>
+          <p>Sunday - Friday</p>
+          <p>11am - 2am</p>
+          <p>Saturday</p>
+          <p>11am - 3am</p>
+        </div>
+        <div class = 'col-xs-12 col-sm-4 text-center' style='margin:20px 0 30px 0;'>
+          <h4>FIND US</h4>
+        </br>
+          <div id="map"></div>
+
+        </div>
+      </div>
+    </div>
+    </footer>
+
+    <!-- End Site -->
+
+    <script>
+
+      let times = []
+
+    $('#timepicker').timepicker({
+      'timeFormat': 'h:i A',
+      'minTime': '10:00am',
+      'maxTime': '10:00pm',
+      'disableTimeRanges': [...times]
+      })
+
+      let fetcher = function(dates, y){
+
+      times = []
+          fetch('/api/reserve')
+                .then(x => x.json())
+                .then(y => {
+                  let days = []
+                  time = []
+
+                  y.filter(b => {
+                    if(b.date === dates) {
+                      days.push(b)
+                    }
+                  })
+
+                  days.forEach(z => {
+                    let hourArray = ['01','02','03','04','05','06','07','08','09','10','11','12']
+                    let minutesArray = ['00','30']
+                    let timestampArray = ['AM','PM']
+
+                    let hour = []
+                    let minute = []
+                    let timestamp =[]
+
+                    let newHour = []
+                    let newMinute = []
+                    let newstamp = []
+
+                      for(let i =0;i<2;i++) {
+                        hour.push(z.time[i])
+                      }
+                      for(let i=3;i<5;i++) {
+                        minute.push(z.time[i])
+                      }
+                      for(let i=6;i<8;i++) {
+                        timestamp.push(z.time[i])
+                      }
+
+                      let parseHour = hour.join('')
+                      let parseMinute = minute.join('')
+                      let parsestamp = timestamp.join('')
+
+                      hourArray.forEach(hoursEach => {
+                        if(hoursEach === parseHour) {
+                          if(hoursEach === '12') {
+                            newHour.push(hourArray[0])
+                          } else {
+                            if(minute.join('') === minutesArray[1]){
+                                newHour.push(hourArray[hourArray.indexOf(hoursEach) + 1])
+                            } else {
+                                newHour.push(hourArray[hourArray.indexOf(hoursEach)])
+                            }
+
+                          }
+                        }
+                      })
+
+                      minutesArray.filter(x => {
+                        if(x !== parseMinute) {
+                          newMinute.push(x)
+                        }
+                      })
+
+                        if(parseHour === '11' && parseMinute === '30'
+                          && parsestamp === 'AM' ) {
+                          newstamp.push(timestampArray[1])
+                        } else {
+                          newstamp.push(parsestamp)
+                        }
+
+
+                      let time2 = newHour.join('') + ':' + newMinute.join('') + ' ' + newstamp.join('')
+
+                      times.push([z.time, time2])
+
+                      })
+
+                      $('#timepicker').timepicker('option','disableTimeRanges', times)
+
+                    })
+                  }
+
+
+     function initMap() {
+      var uluru = {lat: 41.957162, lng: -87.7273816};
+      var map = new google.maps.Map(
+          document.getElementById('map'), {zoom: 13, center: uluru});
+      var marker = new google.maps.Marker({position: uluru, map: map});
+     }
+
+
+     $(document).ready(function(){
+
+       $(".navbar a, #here,.bottomMain a, #headTitle,.overlay-content a, footer a[href='#myPage']").on('click', function(event) {
+
+          if (this.hash !== "") {
+
+            event.preventDefault();
+
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 900, function(){
+              window.location.hash = hash;
+              });
+            }
+          });
+
+       if($(window).width() < 550) {
+         $('#banner').removeClass("titleCen");
+         $('.headerBar').removeClass('display');
+         $("#toggleSmall").css("z-index", "1");
+       } else {
+         $('#banner').addClass("titleCen");
+           $('.headerBar').addClass('display');
+           $("#toggleSmall").css("z-index", "0");
+
+       }
+
+       $( window ).resize(function() {
+              if($(window).width() < 550) {
+                $('#banner').removeClass("titleCen");
+                $('.headerBar').removeClass('display');
+                $("#toggleSmall").css("z-index", "1");
+              } else {
+                $('#banner').addClass("titleCen");
+                $('.headerBar').addClass('display');
+                         $("#toggleSmall").css("z-index", "0");
+              }
+            });
+          })
+
+        function openNav() {
+          if(  document.getElementById("myNav").style.display === "block") {
+              document.getElementById("myNav").style.display = "none";
+          } else {
+             document.getElementById("myNav").style.display = "block"
+          }
+      }
+
+      let hover = document.querySelectorAll('.eventPics')
+      let img = document.querySelectorAll('.imgover')
+      let imgyo = document.querySelectorAll('.imgyo')
+
+
+      hover.forEach(x => {
+        x.addEventListener('mouseover',function(e){
+          if(img[e.target.dataset.key-1].style.display === 'none') {
+            img[e.target.dataset.key-1].style.display = 'inline';
+            imgyo[e.target.dataset.key-1].style.transform = 'scale(1.3,1.3)';
+            imgyo[e.target.dataset.key-1].style.filter = 'blur(2px)';
+          } else {
+              img[e.target.dataset.key-1].style.display = 'inline';
+              imgyo[e.target.dataset.key-1].style.transform = 'scale(1.3,1.3)'
+              imgyo[e.target.dataset.key-1].style.filter = 'blur(2px)';
+
+          }
+        })
+        x.addEventListener('mouseleave',function(e){
+          if(img[e.target.dataset.key-1].style.display === 'inline') {
+            img[e.target.dataset.key-1].style.display = 'none'
+            imgyo[e.target.dataset.key-1].style.transform = 'none';
+            imgyo[e.target.dataset.key-1].style.filter = 'none';
+
+          } else {
+              img[e.target.dataset.key-1].style.display = 'none'
+              imgyo[e.target.dataset.key-1].style.transform = 'none'
+              imgyo[e.target.dataset.key-1].style.filter = 'none';
+          }
+        })
+      })
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyM13RLnAUE4x6V2DOhox_ypO4-LCzgKE&callback=initMap">
+    </script>
+
+  </body>
+</html>
