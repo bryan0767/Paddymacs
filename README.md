@@ -9,13 +9,23 @@ Site made using bootstrap and HTML on the front end. Front end code written with
 back end code written with JavaScript, Express, and MongoDB. Email form sends email and date of submission information to database at mlab.com, reservation form sends request to api which queries database and returns all information which is then filtered through front end code and processed in proper format for timepicker function.
 
 Home Page
+
 ![screen shot 2018-06-25 at 2 54 00 pm](https://user-images.githubusercontent.com/33098684/41872519-c8684c3e-7887-11e8-810b-1ee28156119b.png)
 
+----
+
 Mobile Home Page
+
 ![screen shot 2018-06-25 at 2 54 22 pm](https://user-images.githubusercontent.com/33098684/41872520-c87af244-7887-11e8-82bf-db45161eee75.png)
 
+----
+
 Menu Page
+
 ![screen shot 2018-06-25 at 2 54 40 pm](https://user-images.githubusercontent.com/33098684/41872521-c89f431a-7887-11e8-9697-406297f761de.png)
 
+-----
+
 Mobile Menu page
+
 ![screen shot 2018-06-25 at 2 57 47 pm](https://user-images.githubusercontent.com/33098684/41872669-3a548916-7888-11e8-9be1-e9d92cac7d98.png)
