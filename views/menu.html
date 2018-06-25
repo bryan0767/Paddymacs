@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Paddy Mac's</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/eQEA/3krAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/3c1AP93BQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/3YRAP92JAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP93MgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/dzAAAAAAAP92BAD/dhsA/3cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/eCEA/3iJAP93SAAAAAAA/3YwAP92DAD/dsoA/3b+AP93dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/3iuAP93/wD/dvcA/3YfAP92LwD/dn0A/3b/AP92/wD/drQA/3cMAAAAAAAAAAAAAAAAAAAAAAAAAAAA/3gfAP94wwD/d/8A/3f/AP92jgD/djAA/3bcAP92/wD/dv8A/3b/AP931wD/dwMAAAAAAAAAAAAAAAAAAAAAAP94tgD/eP8A/3f/AP93/wD/dvEA/3ZlAP92/wD/dv8A/3b/AP92/wD/d+wA/3cEAAAAAAAAAAAAAAAAAAAAAAD/eI8A/3j/AP93/wD/d/8A/3bxAP915AD/dOYA/3THAP90qQD/dpAA/3c/AAAAAAAAAAAAAAAAAAAAAAAAAAAA/3gBAP94NwD/d24A/3emAP920QD/deoA/3X4AP92/wD/dv8A/3TMAP9yPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/eG4A/3f7AP92/wD/dv8A/3b8AP904QD/dv8A/3b/AP92/wD/dvQA/20UAAAAAAAAAAAAAAAAAAAAAAD/eQAA/3jlAP93/wD/d/8A/3b/AP92/QD/dNgA/3b/AP92/wD/dv8A/3b3AP9tFQAAAAAAAAAAAAAAAAAAAAAA/3sAAP94lwD/d90A/3f9AP92/wD/duAA/3TFAP92/wD/dv8A/3KOAP9xPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/3cOAP939wD/dv8A/3aFAP9yZgD/dfsA/3XkAP9sEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/dzUA/3ZYAP92BACnCQAA/2cPAP9mCAAAAAAAAAAAAAAAAAAAAAAAAAAA/z8AAP8/AAD+fwAA/v8AAP6PAADiDwAA4AcAAMADAADAAwAAwAcAAMAHAADgAwAAwAMAAMAHAADwDwAA+J8AAA==" rel="icon" type="image/x-icon">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Anaheim" rel="stylesheet">
+    <link href="../src/index.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Questrial" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?9ukd8d">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<a id='home'></a>
+<div id="myNav" class="overlay">
+<div class="overlay-content">
+  <!-- home -->
+      <form action = "/api/home" role = 'form' method ="get" >
+          <input name ='home' value ='Home'type='submit' class='menuInput' onClick='openNav()'>
+        </form>
+        <!-- home -->
+        <!-- special -->
+            <form action = "/api/special" role = 'form' method ="get" >
+                <input name ='special' value ='Special' type='submit' class='menuInput' onClick='openNav()'>
+              </form>
+              <!-- special-->
+    <!-- menu -->
+    <form action = "/api/menu" role = 'form' method ="get" >
+        <input name ='menu' value ='Menu'type='submit' class='menuInput' onClick='openNav()'>
+      </form>
+      <!-- menu -->
+            <li  onClick='openNav()'><a class='menuInput' href="/#reserve">Reserve</a></li>
+
+</div>
+</div>
+
+<span id='toggleSmall' onclick="openNav()">&#9776;</span>
+
+<div class='headerBar display'>
+<span id='toggleButton' onclick="openNav()">&#9776;</span>
+
+<div class='iconTop'>
+<a target ='blank' href ='https://www.facebook.com/pppalpa/'><i
+class="fa fa-facebook-official"></i></a>
+<a target ='blank' href ='https://twitter.com/paddymacschi'><i
+class="fa fa-twitter"></i></a>
+<a target ='blank' href ='https://www.instagram.com/paddymacschicago1/'><i
+  class="fa fa-instagram"></i></a>
+  <a target ='blank' href ='https://www.yelp.com/biz/paddy-macs-chicago'><i
+    class="fa fa-yelp"></i></a>
+</div>
+
+<!-- <a id='headTitle'href='/#home2'><div class='headTitle'>Paddy Mac's</div></a> -->
+
+<form action = "/api/home" role = 'form' method ="get" >
+    <input class='headTitle' name ='home' value ="Paddy Mac's" type='submit' class='menuInput'>
+  </form>
+
+<div class='address'>
+  <p>4157 N. Pulaski | Chicago</p>
+</div>
+</div>
+
+<a id ='top'></a>
+
+    <div class='text-center'>
+    <div id="myCarousel3" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="item active item2">
+            <img style='width:100%;' src="https://cdn.vox-cdn.com/thumbor/hzX0fa05aBjrvz8vh3L0xtNigxY=/0x0:2048x1367/1200x900/filters:focal(861x521:1187x847)/cdn.vox-cdn.com/uploads/chorus_image/image/59000803/16836662_10154499218413473_4517909002811620947_o.0.jpg" alt="Chicago" width="1200" height="700">
+            <div class="carousel-caption page2caption">
+              <h3>Menu</h3>
+            </div>
+          </div>
+
+          <div class="item item2" >
+            <img style='width:100%;'
+              src="https://qtxasset.com/files/nightclub/nodes/2014/9005/beertaps.jpg">
+
+            <div class="carousel-caption page2caption">
+              <h3> More Menu</h3>
+            </div>
+          </div>
+          </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel3" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel3" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+  </div>
+
+  <!-- end header  -->
+
+  <!-- Menus -->
+  <div class='menu text-center' >
+    <ol class="text-center keys2" >
+      <li data-target="#myCarousel4" data-slide-to="0">Main Menu</li>
+      <li data-target="#myCarousel4" data-slide-to="1">Drinks</li>
+      <li data-target="#myCarousel4" data-slide-to="2">Wine and Cocktails</li>
+    </ol>
+
+  <div id="myCarousel4" class="carousel slide"  data-interval="false" data-ride="carousel">
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+
+        <div class="item active">
+          <div class='menuTitles'>
+              <h4><a href='#apps'>Appetizers</a></h4>
+              <h4><a href='#soups'>Soups & Salads</a></h4>
+              <h4><a href='#entrees'>Entrees</a></h4>
+              <h4><a href='#sandwiches'>Sandwiches</a></h4>
+              <h4><a href='#burgers'>Burgers</a></h4>
+              <a id='apps'></a>
+              <h4><a href='#sides'>Sides</a></h4>
+        </div>
+
+
+          <h2>Appetizers</h2>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem' >
+                  <h4>Paddy Mac Sampler 10.95</h4>
+                  <p>Wings, potato skins, cheese sticks
+                    & Reuben pockets.
+                    Served with marinara, blue cheese
+                    & sour cream.</p>
+                </div>
+
+              </div>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Onion Rings 6</h4>
+                  <p>Beer-battered, served light, crisp & extra thick.</p>
+                </div>
+
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Hummus Plate 7.50</h4>
+                  <p>With pita bread, celery, Kalamata olives & carrots. </p>
+                </div>
+
+              </div>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Potato Skins 6.95</h4>
+                  <p>Topped with bacon, cheddar cheese & green onions.
+                    Served with sour cream.</p>
+                </div>
+
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Crab Cakes 6</h4>
+                  <p>7 mini crab cakes served with chipotle mayo & whole
+                    peppercorns.</p>
+                </div>
+
+              </div>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Mozzarella Cheese Sticks 5.75</h4>
+                  <p>Served with marinara.</p>
+                </div>
+
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Reuben Pockets 6.95</h4>
+                  <p>Homemade thinly-sliced corned beef, sauerkraut &
+Swiss cheese wrapped in a spring roll. </p>
+                </div>
+
+              </div>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Quesadilla 6.50</h4>
+                  <p>Add Chicken or Beef $2.50 | Rib Eye Steak $4</p>
+                </div>
+
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Loaded Nachos 7.25</h4>
+                  <p>Homemade tortilla chips topped with refried beans, sour
+cream, guacamole, jalapeños, cheese, tomatoes & onions.
+Served with homemade salsa.</p>
+                  <p>Add Chicken or Beef $2.50 | Rib Eye Steak $4</p>
+                </div>
+
+              </div>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Wings of Fire</h4>
+                  <p>Mild, hot, spicy or BBQ. Served with carrots, celery &
+your choice of blue cheese or ranch dressing.</p>
+                  <p>(8) $6.95 (16) $13.50 (32) $25</p>
+                </div>
+
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-12'>
+                <div class='menuItem'>
+                  <h4>Chicken Strips 6.50</h4>
+                  <a id='soups'></a>
+                  <p>Served with honey Dijon, ranch, or BBQ</p>
+                </div>
+              </div>
+            </div>
+            <!-- end apps -->
+            <!-- <a id='soups'></a> -->
+
+            <h2>Soups & Salads <span><a class='toptop'href='#top'><i class="fa fa-angle-up up"></i></span></a></h2>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem' >
+                  <h4>Our Award Winning Chili</h4>
+                  <p>Cup 3.50</p>
+                  <p>Bowl 5</p>
+                </div>
+
+              </div>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Ceaser Salad 6</h4>
+                  <p>Romaine lettuce tossed in Caesar dressing & topped
+                    with Parmesan cheese & croutons. </p>
+                </div>
+
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Garden Salad 6</h4>
+                  <p>Mixed greens garnished with tomatoes, cheese, red
+                    onions & croutons.  </p>
+                </div>
+
+              </div>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>The Big Salad 9.95</h4>
+                  <p>Mixed greens garnished with avocado, tomatoes, blue
+                    cheese, bacon bits, red onions, bell peppers, Kalamata
+                    olives & croutons.</p>
+                </div>
+
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Add Some Protein</h4>
+                  <p>Chicken $2.50 | Tuna Steak $4 | Rib Eye Steak $4</p>
+                </div>
+
+              </div>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Dressings </h4>
+                  <a id='entrees'></a>
+
+                  <p>Italian, Mediterranean feta, blue cheese, ranch, honey
+                    Dijon, Caesar, 1000 island, and Chipotle Mayo.</p>
+
+                </div>
+              </div>
+            </div>
+            <!-- end soaps -->
+
+
+            <h2>Entrees <span><a href='#top'><i class="fa fa-angle-up up"></i></span></a></h2>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Tacos 5.50</h4>
+                  <p>Two ground beef tacos served on a corn tortilla with
+lettuce, tomato & cheese, as well as chips & salsa, and a
+side of sour cream. </p>
+                </div>
+
+              </div>
+              <div class='col-xs-12 col-sm-6'>
+                <div class='menuItem'>
+                  <h4>Fish & Chips 8</h4>
+                  <p>Beer-battered wild caught cod, fried golden brown &
+served with tartar sauce.</p>
+                </div>
+
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-12'>
+                <div class='menuItem' style='width:280px'>
+                  <h4>Baby Back Ribs</h4>
+
+                  <p>Steamed in Sam Adams Boston Lager, then grilled to
+fall-off-the-bone perfection & slathered in our sweet
+BBQ sauce</p>
+<a id='sandwiches'></a>
+
+<p>Half Slab $9 | Full Slab $17</p>
+                </div>
+
+              </div>
+            </div>
+            <!-- end entrees -->
+
+            <h2>Sandwiches <span><a href='#top'><i class="fa fa-angle-up up"></i></span></a></h2>
+            <p style='width:65%;letter-spacing: 2px;margin:0 auto;'>all sandwiches & burgers served with
+coleslaw & your choice of fries or tots. all burgers served with american, cheddar, swiss, pepper jack, or blue cheese.
+</br></br>substitute curly fries, sweet potato fries, or a salad
+for $1. add grilled onions or sautéed
+mushrooms for .$50 each & bacon for $1.</p>
+<div class='row'>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Irish Corned Beef 7.95</h4>
+      <p>Lean corned beef piled high & served on marble rye.</p>
+    </div>
+
+  </div>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Reuben 8.25</h4>
+      <p>Lean corned beef topped with sauerkraut & Swiss cheese
+served on marble rye.</p>
+    </div>
+
+  </div>
+</div>
+<div class='row'>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Grilled Chicken Sandwich 7</h4>
+      <p>Extra large chicken breast served with American,
+cheddar or Swiss cheese</p>
+      <p>Make it “Buffalo Style:” Add our buffalo sauce & a side
+of blue cheese for $.50</p>
+    </div>
+
+  </div>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Fried Chicken Sandwich 7</h4>
+      <p>A hand-battered chicken breast fried golden. Crispy on
+the outside, tender on the inside.</p>
+    </div>
+
+  </div>
+</div>
+<div class='row'>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>BLT Club 6.50</h4>
+      <p>Crispy bacon, lettuce & tomato on toasted white
+bread.</p>
+    </div>
+
+  </div>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Chicken Caeser Wrap 7</h4>
+      <p>Grilled chicken, lettuce, Parmesan cheese & Caesar
+dressing all wrapped in a flour tortilla. </p>
+    </div>
+
+  </div>
+</div>
+<div class='row'>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Spicy Chicken Sandwich 7.50</h4>
+      <p>Grilled chicken breast topped with jalapeños, pepper
+jack cheese & chipotle dressing served on a ciabatta
+roll. </p>
+    </div>
+
+  </div>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Veggie Wrap 6.50</h4>
+      <p>Portobello mushrooms, avocado, onions, bell peppers,
+hummus & lettuce all wrapped in a flour tortilla.</p>
+    </div>
+
+  </div>
+</div>
+<div class='row'>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Bratwurst 4.95</h4>
+      <p>Boiled in beer & then grilled. Served with grilled
+onions.</p>
+    </div>
+
+  </div>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Rib Eye Steak Sandwich 8</h4>
+      <p>Seasoned steak, grilled to your liking. Served with sautéed
+mushrooms & grilled onions. </p>
+    </div>
+
+  </div>
+</div>
+<div class='row'>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Tuna Steak Sandwich 8</h4>
+      <p>Grilled to perfection & served with chipotle dressing
+on a ciabatta roll. </p>
+    </div>
+
+  </div>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Turkey Grinder 8</h4>
+      <p>Slow-roasted turkey, giardiniera, bell peppers, onions
+& Parmesan cheese served on flat bread. </p>
+    </div>
+
+  </div>
+</div>
+<div class='row'>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Turkey Club 7.95</h4>
+      <p>Sliced turkey, bacon, lettuce, tomato & American cheese
+served on multi-grain bread.  </p>
+    </div>
+
+  </div>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Portobello 7.95</h4>
+      <p>Large, marinated portobello cap grilled and topped with
+avocado & roasted red peppers.</p>
+    </div>
+
+  </div>
+</div>
+<div class='row'>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>Grilled Cheese 5.75</h4>
+      <p>Melted cheddar cheese served on white bread.</p>
+      <p>Make it “Deluxe:” Add egg & bacon for $2</p>
+    </div>
+
+  </div>
+  <div class='col-xs-12 col-sm-6'>
+    <div class='menuItem'>
+      <h4>BBQ Pulled Pork 7</h4>
+      <a id='burgers'></a>
+
+      <p>Slow & low, hickory-smoked pulled pork shoulder
+lightly covered in BBQ sauce. </p>
+
+    </div>
+
+  </div>
+</div>
+<!-- burgers -->
+
+    <h2>Burgers <span><a href='#top'><i class="fa fa-angle-up up"></i></span></a></h2>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-6'>
+        <div class='menuItem'>
+          <h4>Paddy Mac Burger 7</h4>
+          <p> ½ LB beef patty. </p>
+        </div>
+
+      </div>
+      <div class='col-xs-12 col-sm-6'>
+        <div class='menuItem'>
+          <h4>Paddy's Super Burger 8.25</h4>
+          <p>¾ LB seasoned beef patty blended with peppers,
+mushrooms & onions. </p>
+        </div>
+
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-6'>
+        <div class='menuItem'>
+          <h4>Paddy Melt 7.50</h4>
+          <p>½ LB beef patty served on marble rye with your choice
+of cheddar or Swiss cheese & grilled onions.</p>
+        </div>
+
+      </div>
+      <div class='col-xs-12 col-sm-6'>
+        <div class='menuItem'>
+          <h4>Veggie Burger 7</h4>
+          <p>½ LB vegetarian patty.</p>
+        </div>
+
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-6'>
+        <div class='menuItem'>
+          <h4>Turkey Burger 8.50</h4>
+          <p>½ LB vegetarian patty.</p>
+        </div>
+
+      </div>
+      <div class='col-xs-12 col-sm-6'>
+        <div class='menuItem'>
+          <h4>Great Plains Bison Burger 11.50</h4>
+          <a id='sides'></a>
+
+          <p>½ LB buffalo patty</p>
+        </div>
+
+      </div>
+    </div>
+    <!-- sides -->
+
+    <h2>Sides <span><a href='#top'><i class="fa fa-angle-up up"></i></span></a></h2>
+
+    <div class='row'>
+      <div class='col-xs-12 col-sm-6'>
+        <div class='menuItem'>
+          <h4>Fries or Tator Tots 3.25</h4>
+        </div>
+
+      </div>
+      <div class='col-xs-12 col-sm-6'>
+        <div class='menuItem'>
+          <h4>Curly Fries 4</h4>
+        </div>
+
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-6'>
+        <div class='menuItem'>
+          <h4>Chips & Salsa 4</h4>
+        </div>
+
+      </div>
+      <div class='col-xs-12 col-sm-6'>
+        <div class='menuItem'>
+          <h4>Sweet Potato Fries 4</h4>
+        </div>
+
+      </div>
+    </div>
+        </div>
+
+        <!-- beers -->
+
+        <div class="item" >
+          <a id='beers'></a>
+
+          <div class='menuTitles'>
+              <h4><a href='#beers'>Beers</a></h4>
+              <h4><a href='#crafts'>Crafts</a></h4>
+          </div>
+          <h2>Beers on Tap</a></h2>
+
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Angry Orchard</h4>
+                <p>Crisp Cider, Boston Brewing Co., Massachusetts | 5% ABV</p>
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Anti-Hero IPA</h4>
+                <p> India Pale Ale, Revolution Brewing, Illinois | 6.5% ABV </p>
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Blue Moon</h4>
+                <p> Belgian White, Coors Brewing Co., Colorado | 5.4% ABV</p>
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Coors Light</h4>
+                <p> Light Lager, Coors Brewing Co., Colorado | 4.2% ABV</p>
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Dos Equis</h4>
+                <p> Lager, Cervecería Cuauhtémoc Moctezuma, Mexico | 4.3% ABV</p>
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Goose Island</h4>
+                <p>  Rotating Handle, Goose Island Beer Co., Illinois</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Guinness</h4>
+                <p>Irish Stout, Guinness LTD., Ireland | 4.2% ABV</p>
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Lagunitas IPA</h4>
+                <p>American IPA, Lagunitas Brewing Co., California/Illinois | 6.2% ABV</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Miller Light</h4>
+                <p>Light Pilsner, Miller Brewing Co., Wisconsin | 4.2% ABV</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Revolution</h4>
+                <p>Rotating Handle, Revolution Brewing, Illinois</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Sam Adams Boston Lager</h4>
+                <p>Vienna Lager, Boston Beer Co., Massachusetts | 4.9% ABV</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Sam Adams Seaonal</h4>
+                <p>Rotating Seasonal, Boston Beer Co., Massachusetts</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Rotating Local & Craft Handles</h4>
+                <p>See server, as these are constantly changing.</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Sweet Potato Fries 4</h4>
+                <a id='crafts'></a>
+
+                <p>Irish Stout, Guinness LTD., Ireland | 4.2% ABV</p>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- crafts -->
+
+          <h2>Crafts/Micros <span><a href='#top'><i class="fa fa-angle-up up"></i></span></a></h2>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Allagash White</h4>
+                <p>Witbier, Allagash Brewing Co., Maine | 5% ABV</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Daisy Cutter</h4>
+                <p>American Pale Ale, Half Acre Beer Co., Illinois | 5.2% ABV</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Delirium Tremens</h4>
+                <p>Belgian Strong Ale, Brouwerij Huygue, Belgium | 8.5% ABV</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Glutenberg Blonde</h4>
+                <p>Blonde Ale, Brasseurs Sans Gluten, Canada | 4.5% ABV</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Gringolandia Fabulosa</h4>
+                <p>Porter, 5 Rabbit Cervecería, Illinois | 5% ABV</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Leffe Blonde</h4>
+                <p>Belgian Pale Ale, Abbaye de Leffe S.A., Belgium | 6.6% ABV</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Lil Sumpin' Sumpin'</h4>
+                <p>Pale Wheat Ale, Lagunitas Brewing Co., California/Illinois | 7.5% ABV</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Mama's Lil Yella Pils</h4>
+                <p>Czech Pilsener, Oskar Blues Grill & Brew, Colorado | 5.3% ABV</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Neopolitan Milk Stout</h4>
+                <p>Stout, Saugatuck Brewing Co., Michigan | 6% ABV</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Oatmeal Stout</h4>
+                <p>Stout, Breckenridge Brewery, Colorado | 4.95% ABV</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Pacific Pear Cider</h4>
+                <p>Cider, Crispin Cider Co., California | 4.5% ABV</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Revolution</h4>
+                <p>Rotating Seasonal, Revolution Brewing, Illinois </p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Rotating Local & Craft Handles</h4>
+                <p>See server, as these are constantly changing.</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Straight-Up Hefe</h4>
+                <p>Hefeweizen, Berghoff Brewery, Illinois | 5.2% ABV</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Vida Y Muerte</h4>
+                <p>Märzen/Oktoberfest, 5 Rabbit Cervecería, Illinois | 6.4% ABV </p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Xingu</h4>
+                <p>Black Lager, Cervejaria Sul Brasileira, Brazil | 4.7% ABV</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-12'>
+              <div class='menuItem'>
+                <h4>Zombie Monkey</h4>
+                <p>Porter, Tallgrass Brewing Co., Kansas | 6.2% ABV </p>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="item" >
+          <!-- wine and cocktails -->
+          <a id='cocktails'></a>
+
+          <div class='menuTitles'>
+            <h4><a href='#cocktails'>Cocktails</a></h4>
+            <h4><a href='#red'>Red Wines</a></h4>
+            <h4><a href='#white'>White Wines</a></h4>
+          </div>
+          <h2>Cocktails</h2>
+          <p>Half-priced wine bottles every Wednesday.</p>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Honey Bear</h4>
+                <p>Jack Daniel’s Honey Iced Tea
+Splash of Sour</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Chupacabra</h4>
+                <p>El Jimador Tequila
+Orange Juice
+Grenadine</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Flippin Bird</h4>
+                <p>Famous Grouse Scotch
+Ginger Ale
+Splash of Sour</p>
+
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Radley Side Car</h4>
+                <p>Radler with your choice of:
+Smirnoff
+Tanqueray
+or El Jimador</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Ronan's Mule</h4>
+                <p>Stoli Vodka
+                    Ginger Beer
+                    Lime </p>
+
+              </div>
+            </div>
+
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Paddy Mac's Beach Cocktail</h4>
+                <p>Captain Morgan Original Spiced Rum</p>
+                <p>Orange Juice | Cranberry Juice</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Crown Royal Mac'Hattan</h4>
+                <p>Crown Royal | Sweet Vermouth, Splash of Bitters | Cherry dropped in</p>
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Sour Jack</h4>
+                <p>Jack Daniel’s | Lemon Sour</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Angry Balls</h4>
+                <p>Fireball Shot |
+Angry Orchard Hard Cider</p>
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Dirty Bison</h4>
+                <a id='red'></a>
+
+                <p>Zu Bison Grass Vodka |
+Apple Juice</p>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- wines -->
+          <div class='item'>
+          <h2>Red Wines <span><a href='#top'><i class="fa fa-angle-up up"></i></span></a></h2>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Alamos Malbex</h4>
+                <p>100% Argentinean malbec has bright black cherry aromas
+with light floral notes & a touch of toast.</p>
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Fetzer Pinot Noir</h4>
+                <p>Delivers a smooth mouth-feel and layers of rich, ripe
+cherries, raspberries, blueberries & strawberries with a
+touch of oak</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Dark horse Cabernet</h4>
+                <p>Northern California Cabernet features bold
+                  flavours of
+                  blackberry and black cherry, supported by
+                  firm tannins,
+                  brown spice & a dark chocolate espresso finish.</p>
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Ensemble Red Blend</h4>
+                <p>A melodious trio of fruit-forward varietals.
+Zinfandel, Syrah & Merlot in a wine that
+sings with vibrant fruit & supple tannins.</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-12'>
+              <div class='menuItem' style='width:300px'>
+                <h4>Apothic Red</h4>
+                <a id='white'></a>
+
+                <p>The brambly spice of Zinfandel, dark fruit
+flavors of Syrah, bold notes of Cabernet
+Sauvignon & smooth elegance of Merlot
+unite to create this captivating red blend.</p>
+              </div>
+
+            </div>
+
+          </div>
+          <h2>White Wines <span><a href='#top'><i class="fa fa-angle-up up"></i></span></a></h2>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Caposaldo Pinot Grigio</h4>
+                <p>Classic Pinot Grigio from Veneto, Italy.
+Features a dry, crisp, vibrant texture with
+medium body and delicate aromas of apples
+& other white fruits.</p>
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Dark Horse Chardonnay</h4>
+                <p>Hand-selected from the finest grapes in the
+Lodi & Delta region of California.</p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Ensemble White Blend</h4>
+                <p>A harmonious blend of Chardonnay,
+Malvasia Blanca, Muscat,
+Sauvignon Blanc & Riesling.</p>
+              </div>
+
+            </div>
+            <div class='col-xs-12 col-sm-6'>
+              <div class='menuItem'>
+                <h4>Snap Dragon Riesling</h4>
+                <p>Juicy white peach with crisp
+citrus notes. Rated 88 points
+by Wine Enthusiast.</p>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+        </div>
+
+  </div>
+</div>
+<!-- end menu -->
+
+<footer>
+  <div class='container' >
+  <div class = 'row'>
+    <div class = 'col-xs-12 text-center col-sm-4' style='margin:20px 0 30px 0;'>
+      <h4>CONTACT</h4>
+      </br>
+      <p>4157 N. Pulaski</p>
+      <p>Chicago, IL 60641</p>
+      </br>
+      <p>E / Paddymacschicago1@gmail.com</p>
+      <p>T / 773-279-9300</p>
+    </br>
+
+        <div class='icon'>
+          <a target ='blank' href ='https://www.facebook.com/pppalpa/'><i
+          class="fa fa-facebook-official"></i></a>
+        <a target ='blank' href ='https://twitter.com/paddymacschi'><i
+          class="fa fa-twitter"></i></a>
+          <a target ='blank' href ='https://www.instagram.com/paddymacschicago1/'><i
+            class="fa fa-instagram"></i></a>
+            <a target ='blank' href ='https://www.yelp.com/biz/paddy-macs-chicago'><i
+              class="fa fa-yelp"></i></a>
+          </div>
+          <div>
+            <span class="glyphicon glyphicon-copyright-mark symbol">
+            </span> 2018 Paddy Mac's Pub & Grill
+          </div>
+    </div>
+    <div class = 'col-xs-12 col-sm-4 text-center' style='margin:20px 0 30px 0;'>
+      <h4>HOURS</h4>
+    </br>
+      <p>Sunday - Friday</p>
+      <p>11am - 2am</p>
+      <p>Saturday</p>
+      <p>11am - 3am</p>
+    </div>
+    <div class = 'col-xs-12 col-sm-4 text-center' style='margin:20px 0 30px 0;'>
+      <h4>FIND US</h4>
+    </br>
+      <div id="map"></div>
+
+    </div>
+  </div>
+</div>
+</footer>
+<script>
+function initMap() {
+ var uluru = {lat: 41.957162, lng: -87.7273816};
+ var map = new google.maps.Map(
+     document.getElementById('map'), {zoom: 13, center: uluru});
+ var marker = new google.maps.Marker({position: uluru, map: map});
+}
+$(document).ready(function(){
+  $(".navbar a, #headTitle, .menuTitles h4 a, span a, footer a[href='#myPage']").on('click', function(event) {
+
+            if (this.hash !== "") {
+
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 900, function(){
+                window.location.hash = hash;
+                });
+              }
+            });
+
+            if($(window).width() < 550) {
+              $('#banner').removeClass("titleCen");
+              $('.headerBar').removeClass('display');
+              $("#toggleSmall").css("z-index", "1");
+            } else {
+              $('#banner').addClass("titleCen");
+                $('.headerBar').addClass('display');
+                $("#toggleSmall").css("z-index", "0");
+
+            }
+
+            $( window ).resize(function() {
+                   if($(window).width() < 550) {
+                     $('#banner').removeClass("titleCen");
+                     $('.headerBar').removeClass('display');
+                              $("#toggleSmall").css("z-index", "1");
+                   } else {
+                     $('#banner').addClass("titleCen");
+                     $('.headerBar').addClass('display');
+                              $("#toggleSmall").css("z-index", "0");
+
+                   }
+                 });
+          })
+          function openNav() {
+            if(  document.getElementById("myNav").style.display === "block") {
+                document.getElementById("myNav").style.display = "none";
+            } else {
+               document.getElementById("myNav").style.display = "block"
+            }
+        }
+
+
+
+
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyM13RLnAUE4x6V2DOhox_ypO4-LCzgKE&callback=initMap">
+</script>
+
+  </body>
+</html>
